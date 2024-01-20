@@ -120,4 +120,4 @@ html_styled_df = data_report_20.render()
 # Hiển thị DataFrame đã được định dạng trên Streamlit
 st.write(html_styled_df, unsafe_allow_html=True)
 st.subheader('Analyze data with Excel Microsoft')
-st.image('image/Top20 Corporation.PNG')
+st.image('image/Capture.PNG')
