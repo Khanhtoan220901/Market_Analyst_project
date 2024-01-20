@@ -109,6 +109,7 @@ data_report_20 = data_report_20.style.applymap(color_gradient, subset=['Rank FY-
 data_report_20 = data_report_20.applymap(color_down, subset=['Growth_2014','Growth_2015'])
 columns_to_format = ['Growth_2014', 'Growth_2015', 'MS%_2014', 'Evol Index_2014', 'Evol Index_2015', 'MS%_2015']
 data_report_20 = data_report_20.format({'Growth_2014': '{:.1f}%', 'Growth_2015': '{:.1f}%', 'MS%_2014': '{:.1f}%', 'Evol Index_2014': '{:.1f}%', 'Evol Index_2015': '{:.1f}%', 'MS%_2015': '{:.1f}%'})
+data_report_20 = data_report_20.hide_index()
 headers = {
     'selector': 'th.col_heading',
     'props': 'background-color: #000066; color: white;'
