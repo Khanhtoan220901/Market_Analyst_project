@@ -1,0 +1,5 @@
+numpy
+streamlit
+plotly
+datetime
+st-pages
