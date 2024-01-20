@@ -5,7 +5,7 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
-data = pd.read_csv(r"C:/Users/khanh/Documents/Market Analyst/MIDAS_VN_Qdata_1Q2015_vF.csv")
+data = pd.read_csv("MIDAS_VN_Qdata_1Q2015_vF.csv")
 st.set_page_config(layout = 'wide', page_title='Product Analyst')
 st.header('TOP 20 CORPORATIONS IN TOTAl PHARMA MARKET')
 
@@ -119,4 +119,4 @@ html_styled_df = data_report_20.render()
 # Hiển thị DataFrame đã được định dạng trên Streamlit
 st.write(html_styled_df, unsafe_allow_html=True)
 st.subheader('Analyze data with Excel Microsoft')
-st.image(r'C:/Users/khanh/Documents/Market Analyst/image/Top20 Corporation.PNG')
+st.image('image/Top20 Corporation.PNG')
