@@ -9,8 +9,8 @@ show_pages(
           Page("Content.py", "Content"),
           Page("Channel.py", "Channel"),
           Page("Branded_GX.py", "Branded_GX"),
-        Page("/content/RevenueProduct.py", "Daily Revenue Product", "🗓️"),
-        Page("/content/ProductNETandGROSS.py", "Product NET and GROSS", "💰")
+        Page("RevenueProduct.py", "Daily Revenue Product", "🗓️"),
+        Page("ProductNETandGROSS.py", "Product NET and GROSS", "💰")
     ]
 )
 
