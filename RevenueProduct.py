@@ -24,7 +24,7 @@ invoice_date_13 = [datetime.strptime(str(date), '%Y%m%d').strftime('%d/%m/%Y') f
 data_13['Invoice Date'] = invoice_date_13
 data_13['Invoice Date'] = pd.to_datetime(data_13['Invoice Date'], format='%d/%m/%Y') # định dạng từ str sang kiểu datatime
 data_13 = data_13[['BRAND','Invoice Date','Net Sales Value']] # lấy những bảng cần lấy để xử lý
-data_14 = pd.read_csv('/content/drive/MyDrive/Data/Sales Data 2014.csv')
+data_14 = pd.read_csv('Sales Data 2014.csv')
 data_14 = data_14.drop(['Brand','Region'], axis = 1)
 invoice_date = list(data_14['Invoice Confirmed Date'])
 invoice_date = [datetime.strptime(str(date), '%Y%m%d').strftime('%d/%m/%Y') for date in invoice_date ]
