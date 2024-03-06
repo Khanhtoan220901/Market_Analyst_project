@@ -5,7 +5,7 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
-data = pd.read_csv(r"C:/Users/khanh/Documents/Market Analyst/MIDAS_VN_Qdata_1Q2015_vF.csv")
+data = pd.read_csv("MIDAS_VN_Qdata_1Q2015_vF.csv")
 st.set_page_config(layout = 'wide', page_title='Product Analyst')
 st.header('TOP 20 CORPORATIONS IN TOTAl PHARMA MARKET')
 
@@ -109,6 +109,7 @@ data_report_20 = data_report_20.style.applymap(color_gradient, subset=['Rank FY-
 data_report_20 = data_report_20.applymap(color_down, subset=['Growth_2014','Growth_2015'])
 columns_to_format = ['Growth_2014', 'Growth_2015', 'MS%_2014', 'Evol Index_2014', 'Evol Index_2015', 'MS%_2015']
 data_report_20 = data_report_20.format({'Growth_2014': '{:.1f}%', 'Growth_2015': '{:.1f}%', 'MS%_2014': '{:.1f}%', 'Evol Index_2014': '{:.1f}%', 'Evol Index_2015': '{:.1f}%', 'MS%_2015': '{:.1f}%'})
+data_report_20 = data_report_20.hide_index()
 headers = {
     'selector': 'th.col_heading',
     'props': 'background-color: #000066; color: white;'
@@ -119,4 +120,4 @@ html_styled_df = data_report_20.render()
 # Hiển thị DataFrame đã được định dạng trên Streamlit
 st.write(html_styled_df, unsafe_allow_html=True)
 st.subheader('Analyze data with Excel Microsoft')
-st.image(r'C:/Users/khanh/Documents/Market Analyst/image/Top20 Corporation.PNG')
+st.image('image/Capture.PNG')

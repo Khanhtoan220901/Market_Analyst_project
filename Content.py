@@ -4,7 +4,7 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
-data = pd.read_csv(r"C:/Users/khanh/Documents/Market Analyst/MIDAS_VN_Qdata_1Q2015_vF.csv")
+data = pd.read_csv("MIDAS_VN_Qdata_1Q2015_vF.csv")
 st.set_page_config(layout = 'wide', page_title='Product Analyst')
 st.header('MAIN MARKET | CONTENT')
 
@@ -112,13 +112,13 @@ st.dataframe(data_kq_share)
 st.dataframe(data_kq_growth)
 if value == "UN'000":
   st.subheader('Analyze data with Excel Microsoft')
-  st.image(r'C:/Users/khanh/Documents/Market Analyst/image/Content_UN.PNG')
+  st.image('image/Content_UN.PNG')
 elif value == "CU'000":
   st.subheader('Analyze data with Excel Microsoft')
-  st.image(r'C:/Users/khanh/Documents/Market Analyst/image/Content_CU.PNG')
+  st.image('image/Content_CU.PNG')
 elif value == "VND'000":
   st.subheader('Analyze data with Excel Microsoft')
-  st.image(r'C:/Users/khanh/Documents/Market Analyst/image/Content_VND.PNG')
+  st.image('image/Content_VND.PNG')
 elif value == "USD'000":
   st.subheader('Analyze data with Excel Microsoft')
-  st.image(r'C:/Users/khanh/Documents/Market Analyst/image/Content_USD.PNG')
+  st.image('image/Content_USD.PNG')
