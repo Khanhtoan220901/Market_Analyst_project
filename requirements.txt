@@ -3,4 +3,4 @@ pandas==1.5.3
 streamlit
 plotly
 datetime
-st-pages
+st-pages==0.4.1
