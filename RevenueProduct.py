@@ -204,4 +204,4 @@ with column2:
   st.plotly_chart(fig_QTD, use_container_width= True)
 with column3:
   st.plotly_chart(fig_YTD, use_container_width= True)
-st.dataframe(data_report_1,hide_index =True)
+st.dataframe(data_report_1.reset_index(drop=True))
