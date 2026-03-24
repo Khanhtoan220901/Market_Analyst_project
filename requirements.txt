@@ -1,6 +1,6 @@
 numpy
 pandas==1.5.3
-streamlit
+streamlit==1.25.0
 plotly
 datetime
 st-pages==0.4.1
