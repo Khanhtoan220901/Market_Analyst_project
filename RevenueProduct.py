@@ -66,7 +66,7 @@ if 4 <= input_date.month and input_date.month <= 6:
   QTD_14 = data_14.loc[(data_14['Invoice Date'].dt.month >= 4) & (data_14['Invoice Date'].dt.month <= 6) & (data_14['Invoice Date'].dt.day >= 1) & (data_14['Invoice Date'] <= pd.Timestamp(f"{input_date.year}-{input_date.month}-{input_date.day} 00:00:00"))]
   SumQTD_14 = MTD_14.groupby('BRAND')['Net Sales Value'].sum()
   QTD_13 = data_13.loc[(data_13['Invoice Date'].dt.month >= 4) & (data_13['Invoice Date'].dt.month <= 6) & (data_13['Invoice Date'].dt.day >= 1) & (data_13['Invoice Date'] <= pd.Timestamp(f"{input_date.year}-{input_date.month}-{input_date.day} 00:00:00"))]
-  SumQTD_13 = MTD_13.groupby(['ZP Item Code','BRAND'])['Net Sales Value'].sum()
+  SumQTD_13 = MTD_13.groupby('BRAND')['Net Sales Value'].sum()
   data_QTD_14 = SumQTD_14.reset_index(name='This Year Sales')[['BRAND','This Year Sales']]
   data_QTD_13 = SumQTD_13.reset_index(name='Last Year Sales')[['BRAND','Last Year Sales']]
 if 7 <= input_date.month and input_date.month <= 9:
